@@ -4,7 +4,6 @@
 <div class="container">
   <div class="col-md-4">
     <h1>ToDo Example</h1>
-
     {{range .errors}}
       <p class="text-danger">{{.Message}}</p>
     {{end}}
@@ -13,8 +12,8 @@
     <form action="{{url "App.Login"}}" method="POST">
       {{with $field := field "user.Name" .}}
         <div class="form-group">
-          <label for="{{$field.id}}">Username:</label>
-          <input class="form-control" autofocus="true" type="text" name="{{$field.Name}}" value="{{$field.Flash}}" />
+          <label for="{{$field.Name}}">User Name:</label>
+          <input class="form-control" autofocus="" type="text" name="{{$field.Name}}" value="{{$field.Flash}}" />
         </div>
       {{end}}
       <button class="btn btn-default" type="submit">Login</button>

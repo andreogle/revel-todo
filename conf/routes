@@ -8,6 +8,9 @@ module:testrunner
 
 
 GET     /                                       App.Index
+POST    /                                       App.Login
+GET     /todo                                   Todo.Index
+POST    /todo                                   Todo.AddTodo
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
